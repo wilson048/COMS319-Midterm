@@ -1,7 +1,15 @@
 {
     "index_data": [
-        {"text": "Welcome to Wallace and Wilson, Residental Halls south of the Iowa State Campus"}, 
-        {"text": "B"}, 
-        {"text": "C"}
+        {"text": "Welcome to Wallace and Wilson, Residental Halls south of the Iowa State Campus",
+        "subtext": "Check out ",
+        "btntext": "Click here"}, 
+
+        {"text": "Watch: The other parts of Towers be blown to pieces", 
+        "subtext": "A big event in the history of towers",
+        "btntext": "Watch here"},
+
+        {"text": "Want to know more about our history?", 
+        "subtext": "We have a comprehensive history page",
+        "btntext": "Read More"}
     ]
 }
