@@ -1,15 +1,42 @@
 {
-    "index_data": [
-        {"text": "Welcome to Wallace and Wilson, Residental Halls south of the Iowa State Campus",
-        "subtext": "Check out ",
+    "top_page": {
+        "text": "Welcome to Wallace and Wilson Residence Halls here at Ames, Iowa",
+        "subtext": "Enjoy a place away from the Iowa State Campus",
+        "iframe_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4192.133339183274!2d-93.64940209469924!3d42.01559854604456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ee7a08d51bd6b7%3A0x172ab854733e2f76!2sWallace%20Residence%20Hall!5e0!3m2!1sen!2sus!4v1709693725938!5m2!1sen!2sus" 
+    },
+
+    "index_recent_data": [
+        {"text": "Check out our floor plans for the two buildings located here",
+        "subtext": "We have 20 floors to choose from",
         "btntext": "Click here"}, 
 
         {"text": "Watch: The other parts of Towers be blown to pieces", 
         "subtext": "A big event in the history of towers",
         "btntext": "Watch here"},
 
-        {"text": "Want to know more about our history?", 
-        "subtext": "We have a comprehensive history page",
+        {"text": "An update regarding the Mini-mart located inside the commons", 
+        "subtext": "Petty theft threatens the closure of the Mini-mart",
         "btntext": "Read More"}
-    ]
+    ],
+
+    "index_history_data": [
+        {"text": "Watch: The other two towers on the south of campus get blown up",
+        "subtext": "We have 20 floors to choose from",
+        "btntext": "Click here"}, 
+
+        {"text": "Watch: The other parts of Towers be blown to pieces", 
+        "subtext": "A big event in the history of towers",
+        "btntext": "Watch here"},
+
+        {"text": "An update regarding the Mini-mart located inside the commons", 
+        "subtext": "Petty theft threatens the closure of the Mini-mart",
+        "btntext": "Read More"}
+    ],
+
+    "bottom_page": {
+        "text": "Featured: A drawing of towers facing south standing on Welch Ave",
+        "subtext": "Drawn by an unnamed individual living in the Towers area",
+        "img": "images/Wallace and Wilson Sketch.jpg"
+    }
+    
 }
