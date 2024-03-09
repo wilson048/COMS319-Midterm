@@ -3,9 +3,8 @@
   <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../assets/js/color-modes.js">
-    </script>
-
+    <!-- <script src="../assets/js/color-modes.js">
+    </script> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -201,7 +200,7 @@
   <header class = "header" data-bs-theme="dark">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Wallace and Wilson Residence Halls</a>
+        <a class="navbar-brand" href="index.html">Wallace and Wilson Residence Halls</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -228,10 +227,11 @@
 </div>
 
 <main class="container">
-  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+  <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary" id = "background">
     <div class="col-lg-6 px-0">
-      <h1 class="display-4 fst-italic">The History of Towers</h1>
-      <p class="lead my-3">Learn about the towers in the south of campus. Current and previous.</p>
+      <h1 class="display-4 fst-italic" id = headerline></h1> 
+      <script src ="history.js"></script>
+      <p class="lead my-3" id = "headersub"></p>
     </div>
   </div>
 
@@ -239,34 +239,64 @@
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <h3 class="mb-0">Old Picture of all 4 Towers</h3>
-          <div class="mb-1 text-body-secondary">Estimated date 1990's</div>
-          <p class="card-text mb-auto">This is an old picture of all 4 towers from the parking lot. It displays what it once looked like before they destroyed Knapp and Storms.</p>
+          <h3 class="mb-0" id = "tower header"></h3>
+          <div class="mb-1 text-body-secondary" id = "datetower"></div>
+          <p class="card-text mb-auto" id ="midtexttower"></p>
         </div>
         <div class="col-auto d-none d-lg-block">
-          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+          <img class="bd-placeholder-img" id= "talltowerimg"width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
         </div>
       </div>
     </div>
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
-          <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
-          <h3 class="mb-0">Beat Iowa</h3>
-          <div class="mb-1 text-body-secondary">Early 2000's</div>
-          <p class="mb-auto">This is an imgae of a tradition that towers used to have. One of the buildings would work with those living there to display the message beat Iowa the 
-            week of the ISU v.s. Iowa game. 
+          <h3 class="mb-0" id="beat iowah"></h3>
+          <div class="mb-1 text-body-secondary" id ="beat iowa time"></div>
+          <p class="mb-auto" id="iowa text"> 
           </p>
         </div>
         <div class="col-auto d-none d-lg-block">
-          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+          <img class="bd-placeholder-img"  id = "beatiowaimage" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="row g-5">
-    <div class="col-md-8">
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0" id = "tower header"></h3>
+          <div class="mb-1 text-body-secondary" id = "datetower"></div>
+          <p class="card-text mb-auto" id ="midtexttower"></p>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img" id= "talltowerimg"width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <iframe id="video"></iframe>
+        <div class="col p-4 d-flex flex-column position-static">
+          <iframe id="video"></iframe>
+          <!-- <h3 class="mb-0" id="beat iowah"></h3>
+          <div class="mb-1 text-body-secondary" id ="beat iowa time"></div>
+          <p class="mb-auto" id="iowa text"> 
+          </p>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <img class="bd-placeholder-img"  id = "beatiowaimage" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-12">
       <h3 class="pb-4 mb-4 fst-italic border-bottom">
         From the Firehose
       </h3>
@@ -393,7 +423,7 @@
 
     </div>
 
-    <div class="col-md-4">
+    <!-- <div class="col-md-4">
       <div class="position-sticky" style="top: 2rem;">
         <div class="p-4 mb-3 bg-body-tertiary rounded">
           <h4 class="fst-italic">About</h4>
@@ -460,7 +490,7 @@
           </ol>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 
 </main>

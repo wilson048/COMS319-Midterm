@@ -15,34 +15,34 @@
         {"text": "Learn more our head body, the Department of Residence", 
         "subtext": "They are the bueracratic authority in charge of us",
         "btntext": "Click here",
-        "img": "images/inside room.jpg",
+        "img": "images/inside room.jpeg",
         "href": "https://www.housing.iastate.edu/"},
 
         {"text": "An update regarding the Mini-mart located inside the commons", 
         "subtext": "Petty theft threatens the closure of the Mini-mart",
         "btntext": "Read More",
-        "img": "images/commons inside.jpg",
+        "img": "images/commons inside.jpeg",
         "href": "#update-page"}
     ],
 
     "index_history_data": [
         {"text": "Watch: The other two towers on the south of campus get blown up",
         "subtext": "We have 20 floors to choose from",
-        "btntext": "Watch here",
-        "img": "images/towers demolition.PNG",
+        "btntext": "Click here",
+        "img": "images/better towers floor plan.PNG",
         "href": "history.html"}, 
 
         {"text": "Beat Iowa: A staple of Iowa State", 
         "subtext": "See it be recreated here",
         "btntext": "Click here",
-        "img": "images/beat iowa.jpg",
-        "href": "history.html"},
+        "img": "images/better towers floor plan.PNG",
+        "href": ""},
 
         {"text": "An update regarding the Mini-mart located inside the commons", 
         "subtext": "Petty theft threatens the closure of the Mini-mart",
         "btntext": "Read More",
         "img": "images/better towers floor plan.PNG",
-        "href": "history.html"}
+        "href": ""}
     ],
 
     "featured_page": {
@@ -54,7 +54,33 @@
         "text": "Update: Mini-Mart seeing ever-increasing theft",
         "subtext": "ISU Dining comments on the situation",    
         "img": "images/mini mart.PNG"
-    }
-    
+    },
+
+    "history_information" : [
+        {"text":"Old Picture of all 4 Towers",
+        "subtext":"Estimated date 1990's",
+        "lowerText":"This is an old picture of all 4 towers from the parking lot. It displays what it once looked like before they destroyed Knapp and Storms.",
+        "img": "images/tall towers.jpg"
+        },
+        {
+            "text": "The History of Towers",
+            "subtext": "Learn about the towers in the south of campus. Current and previous.",
+            "img":"images/night towers photo.jpg"
+        },
+        {
+            "text":"Beat Iowa",
+            "subtext":"Early 2000's",
+            "lowerText":"This is an imgae of a tradition that towers used to have. One of the buildings would work with those living there to display the message beat Iowa the week of the ISU v.s. Iowa game.",
+            "img": "images/beat iowa.jpg"
+        },
+        {
+            "text":"A pretty image of Towers at Night",
+            "subtext":"Unknown date",
+            "lowerText":"The towers are very pretty at night with some of the lights on. Sadly only 2 of them still exsist today"
+        },
+        {
+            "video":"https://www.youtube.com/watch?v=bF_hLngCRQk"
+        }
+    ]
     
 }
