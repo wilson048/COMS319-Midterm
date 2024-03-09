@@ -1,5 +1,5 @@
 let recentCarousel = document.getElementById("Recent-Carousel");
-recentCarousel.innerHTML = 
+recentCarousel.innerHTML =
   `<div class="carousel-indicators">
     <button type="button" data-bs-target="#Recent-Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#Recent-Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -45,7 +45,7 @@ recentCarousel.innerHTML =
   </button>`
 
 let historyCarousel = document.getElementById("History-Carousel");
-historyCarousel.innerHTML = 
+historyCarousel.innerHTML =
   `<div class="carousel-indicators">
     <button type="button" data-bs-target="#History-Carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#History-Carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -87,8 +87,8 @@ historyCarousel.innerHTML =
   </button>`
 
 fetch('data.json')
-    .then(response => response.json())
-    .then(data => placeIndexData(data));
+  .then(response => response.json())
+  .then(data => placeIndexData(data));
 
 function placeIndexData(jsonData) {
   // Top of Screen data
@@ -118,59 +118,59 @@ function placeIndexData(jsonData) {
   top_iframe_element.appendChild(iFrameTop);
 
   // Carousel Data
-  for(var i = 0; i < jsonData.index_recent_data.length; i++) {
-      // First Carousel, featuring recent information 
-      // Get parent element + create 3 new elements
-      var recentElement = document.getElementById("Recent-" + (i + 1));
-      var hRecentElement = document.createElement("h1");
-      var pRecentElementOne = document.createElement("p");
-      var pRecentElementTwo = document.createElement("p");
-      // Populate elements with data from data.json
-      hRecentElement.innerText = jsonData.index_recent_data[i].text;
-      hRecentElement.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
-      pRecentElementOne.innerText = jsonData.index_recent_data[i].subtext;
-      pRecentElementOne.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
-      pRecentElementTwo.innerHTML = `<a class="btn btn-lg btn-primary" href="${jsonData.index_recent_data[i].href}">${jsonData.index_recent_data[i].btntext}</a>`
-      // Append elements to parent element
-      recentElement.appendChild(hRecentElement);
-      recentElement.appendChild(pRecentElementOne);
-      recentElement.appendChild(pRecentElementTwo);
+  for (var i = 0; i < jsonData.index_recent_data.length; i++) {
+    // First Carousel, featuring recent information 
+    // Get parent element + create 3 new elements
+    var recentElement = document.getElementById("Recent-" + (i + 1));
+    var hRecentElement = document.createElement("h1");
+    var pRecentElementOne = document.createElement("p");
+    var pRecentElementTwo = document.createElement("p");
+    // Populate elements with data from data.json
+    hRecentElement.innerText = jsonData.index_recent_data[i].text;
+    hRecentElement.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
+    pRecentElementOne.innerText = jsonData.index_recent_data[i].subtext;
+    pRecentElementOne.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
+    pRecentElementTwo.innerHTML = `<a class="btn btn-lg btn-primary" href="${jsonData.index_recent_data[i].href}">${jsonData.index_recent_data[i].btntext}</a>`
+    // Append elements to parent element
+    recentElement.appendChild(hRecentElement);
+    recentElement.appendChild(pRecentElementOne);
+    recentElement.appendChild(pRecentElementTwo);
 
-      var imgElement = document.getElementById("Recent-" + (i + 1) + "-img");
-      imgElement.src = jsonData.index_recent_data[i].img;
-      
-      // Second Carousel, featuring historic information 
-      // Get parent element + create 3 new elements
-      var historyElement = document.getElementById("History-" + (i + 1));
-      var hHistoryElement = document.createElement("h1");
-      var pHistoryElementOne = document.createElement("p");
-      var pHistoryElementTwo = document.createElement("p");
-      // Populate elements with data from data.json
-      hHistoryElement.innerText = jsonData.index_history_data[i].text;
-      hHistoryElement.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
-      pHistoryElementOne.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
-      
-      var historyImgElement = document.getElementById("History-" + (i + 1) + "-img")
-      historyImgElement.src = jsonData.index_history_data[i].img;
-      
-      pHistoryElementOne.innerText = jsonData.index_history_data[i].subtext;
-      pHistoryElementTwo.innerHTML = `<a class="btn btn-lg btn-primary" href="${jsonData.index_history_data[i].href}">${jsonData.index_history_data[i].btntext}</a>`
-      // Append elements to parent element
-      historyElement.appendChild(hHistoryElement);
-      historyElement.appendChild(pHistoryElementOne);
-      historyElement.appendChild(pHistoryElementTwo);
+    var imgElement = document.getElementById("Recent-" + (i + 1) + "-img");
+    imgElement.src = jsonData.index_recent_data[i].img;
+
+    // Second Carousel, featuring historic information 
+    // Get parent element + create 3 new elements
+    var historyElement = document.getElementById("History-" + (i + 1));
+    var hHistoryElement = document.createElement("h1");
+    var pHistoryElementOne = document.createElement("p");
+    var pHistoryElementTwo = document.createElement("p");
+    // Populate elements with data from data.json
+    hHistoryElement.innerText = jsonData.index_history_data[i].text;
+    hHistoryElement.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
+    pHistoryElementOne.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
+
+    var historyImgElement = document.getElementById("History-" + (i + 1) + "-img")
+    historyImgElement.src = jsonData.index_history_data[i].img;
+
+    pHistoryElementOne.innerText = jsonData.index_history_data[i].subtext;
+    pHistoryElementTwo.innerHTML = `<a class="btn btn-lg btn-primary" href="${jsonData.index_history_data[i].href}">${jsonData.index_history_data[i].btntext}</a>`
+    // Append elements to parent element
+    historyElement.appendChild(hHistoryElement);
+    historyElement.appendChild(pHistoryElementOne);
+    historyElement.appendChild(pHistoryElementTwo);
   }
 
   // Featured Page Data
   var featuredElement = document.getElementById("featured-page");
   var h2FeaturedElement = document.createElement("h2");
   var pFeaturedElement = document.createElement("p");
-  
+
   h2FeaturedElement.className = "featurette-heading fw-normal lh-1";
   h2FeaturedElement.innerText = jsonData.featured_page.text;
   pFeaturedElement.className = "lead";
   pFeaturedElement.innerText = jsonData.featured_page.subtext;
-  
+
   featuredElement.appendChild(h2FeaturedElement);
   featuredElement.appendChild(pFeaturedElement);
   // featured Page Image Data
@@ -190,12 +190,12 @@ function placeIndexData(jsonData) {
   var updateElement = document.getElementById("update-page");
   var h2UpdateElement = document.createElement("h2");
   var pUpdateElement = document.createElement("p");
-  
+
   h2UpdateElement.className = "featurette-heading fw-normal lh-1";
   h2UpdateElement.innerText = jsonData.update_page.text;
   pUpdateElement.className = "lead";
   pUpdateElement.innerText = jsonData.update_page.subtext;
-  
+
   updateElement.appendChild(h2UpdateElement);
   updateElement.appendChild(pUpdateElement);
   // update page Image data

@@ -5,20 +5,75 @@ fetch('data.json')
 function placeDropdownData(jsonData) {
     // Build Dropdown menu for buildings
     buildingDropdown = document.getElementById("Building-Dropdown");
-    for(var i = 0; i < jsonData.building_dropdown.length; i++) {
+    floorDropdown = document.getElementById("Floor-Dropdown");
+    for (var i = 0; i < jsonData.building_dropdown.length; i++) {
         var lElement = document.createElement("li");
         var lButtonElement = document.createElement("a");
         lButtonElement.className = "dropdown-item";
         lButtonElement.id = jsonData.building_dropdown[i].text;
         lButtonElement.innerText = jsonData.building_dropdown[i].text;
-        lButtonElement.addEventListener("click", function() {
+        lButtonElement.addEventListener("click", function () {
             placeBuildingData(this.id, jsonData);
         })
         // lElement.innerHTML = `<a class="dropdown-item" href="#">${}</a>`;
         lElement.appendChild(lButtonElement);
         buildingDropdown.appendChild(lElement);
+        if (lButtonElement.id = "Wallace") {
+            for (var j = 0; j < jsonData.wallace_floor_dropdown.length; j++) {
+                var element = document.createElement("li");
+                var buttonelement = document.createElement("a");
+                buttonelement.className = "dropdown-item";
+                buttonelement.id = jsonData.wallace_floor_dropdown[j].text;
+                buttonelement.innerText = jsonData.wallace_floor_dropdown[j].text;
+                buttonelement.addEventListener("click", function () {
+                    placeFloorplanDataWallace(this.id, jsonData);
+                })
+            }
+        }
+        else if (lButtonElement.id = "Wilson") {
+
+        }
+        else if (lButtonElement.id = "Commons") {
+
+        }
+        else {
+
+        }
     }
 }
+
+function placeFloorplanDataWallace(text, jsonData) {
+    var floorDiv = document.getElementById("Floor");
+    floorDiv.innerHTML = "";
+    var h1Element = document.createElement("h1");
+    var pElement = document.createElement("p");
+    var imgElement = document.createElement("img");
+    var isSelected = false;
+    switch (text) {
+        case "1st Floor":
+            break;
+        case "2nd Floor":
+            break;
+        case "3rd Floor":
+            break;
+        case "4th Floor":
+            break;
+        case "5th Floor":
+            break;
+        case "6th Floor":
+            break;
+        case "7th Floor":
+            break;
+        case "8th Floor":
+            break;
+        case "9th Floor":
+            break;
+        case "10th Floor":
+            break;
+
+    }
+}
+
 
 function placeBuildingData(text, jsonData) {
     var buildingDiv = document.getElementById("Building");
@@ -54,7 +109,7 @@ function placeBuildingData(text, jsonData) {
             break;
     }
     // Load Data into div element if a button is selected
-    if(isSelected) {
+    if (isSelected) {
         buildingDiv.appendChild(h1Element);
         buildingDiv.appendChild(pElement);
         buildingDiv.appendChild(imgElement);
@@ -64,6 +119,3 @@ function placeBuildingData(text, jsonData) {
     // <img src="images/night towers photo.jpg"> -->
 }
 
-function placeFloorplanData() {
-
-}
