@@ -56,51 +56,51 @@ function placeFloorplanDataWallace(text, jsonData) {
     var isSelected = false;
     switch (text) {
         case "1st Floor":
-            // placeData(0,pElement,imgElement,h1Element,link,isSelected);
-            h1Element.innerText = jsonData.wallace_floor_dropdown[0].text;
-            pElement.innerText = jsonData.wallace_floor_dropdown[0].hall;
-            imgElement.src = jsonData.wallace_floor_dropdown[0].img;
-            link.href = jsonData.wallace_floor_dropdown[0].href;
-            isSelected = true;
+            placeData(0,pElement,imgElement,h1Element,link,isSelected,jsonData);
+            // h1Element.innerText = jsonData.wallace_floor_dropdown[0].text;
+            // pElement.innerText = jsonData.wallace_floor_dropdown[0].hall;
+            // imgElement.src = jsonData.wallace_floor_dropdown[0].img;
+            // link.href = jsonData.wallace_floor_dropdown[0].href;
+            // isSelected = true;
             break;
         case "2nd Floor":
-            placeData(1, pElement, imgElement, h1Element, link, isSelected);
+            placeData(1, pElement, imgElement, h1Element, link, isSelected,jsonData);
             break;
         case "3rd Floor":
-            placeData(2, pElement, imgElement, h1Element, link, isSelected);
+            placeData(2, pElement, imgElement, h1Element, link, isSelected,jsonData);
             break;
         case "4th Floor":
-            placeData(3, pElement, imgElement, h1Element, link, isSelected);
+            placeData(3, pElement, imgElement, h1Element, link, isSelected,jsonData);
             break;
         case "5th Floor":
-            placeData(4, pElement, imgElement, h1Element, link, isSelected);
+            placeData(4, pElement, imgElement, h1Element, link, isSelected,jsonData);
             break;
         case "6th Floor":
-            placeData(5, pElement, imgElement, h1Element, link, isSelected);
+            placeData(5, pElement, imgElement, h1Element, link, isSelected,jsonData);
             break;
         case "7th Floor":
-            placeData(6, pElement, imgElement, h1Element, link, isSelected);
+            placeData(6, pElement, imgElement, h1Element, link, isSelected,jsonData);
             break;
         case "8th Floor":
-            placeData(7, pElement, imgElement, h1Element, link, isSelected);
+            placeData(7, pElement, imgElement, h1Element, link, isSelected,jsonData);
             break;
         case "9th Floor":
-            placeData(8, pElement, imgElement, h1Element, link, isSelected);
+            placeData(8, pElement, imgElement, h1Element, link, isSelected,jsonData);
             break;
         case "10th Floor":
-            placeData(9, pElement, imgElement, h1Element, link, isSelected);
+            placeData(9, pElement, imgElement, h1Element, link, isSelected,jsonData);
             break;
         default:
             break;
     }
     if (isSelected) {
-        buildingDiv.appendChild(h1Element);
-        buildingDiv.appendChild(pElement);
-        buildingDiv.appendChild(imgElement);
+        floorDiv.appendChild(h1Element);
+        floorDiv.appendChild(pElement);
+        floorDiv.appendChild(imgElement);
     }
 }
 
-function placeData(i, pElement, imgElement, h1Element, link, isSelected) {
+function placeData(i, pElement, imgElement, h1Element, link, isSelected,jsonData) {
     h1Element.innerText = jsonData.wallace_floor_dropdown[i].text;
     pElement.innerText = jsonData.wallace_floor_dropdown[i].hall;
     imgElement.src = jsonData.wallace_floor_dropdown[i].img;
