@@ -1,7 +1,7 @@
 {
     "top_page": {
         "text": "Welcome to Wallace and Wilson Residence Halls here at Ames, Iowa",
-        "subtext": "Enjoy a place away from the Iowa State Campus",
+        "subtext": "Enjoy a place away from the Iowa State Campus, featuring over 20 stories combined between the building along with outdoor play areas and an indoor gym",
         "iframe_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4192.133339183274!2d-93.64940209469924!3d42.01559854604456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ee7a08d51bd6b7%3A0x172ab854733e2f76!2sWallace%20Residence%20Hall!5e0!3m2!1sen!2sus!4v1709693725938!5m2!1sen!2sus" 
     },
 
@@ -15,13 +15,13 @@
         {"text": "Learn more our head body, the Department of Residence", 
         "subtext": "They are the bueracratic authority in charge of us",
         "btntext": "Click here",
-        "img": "images/inside room.jpeg",
+        "img": "images/inside room.jpg",
         "href": "https://www.housing.iastate.edu/"},
 
         {"text": "An update regarding the Mini-mart located inside the commons", 
         "subtext": "Petty theft threatens the closure of the Mini-mart",
         "btntext": "Read More",
-        "img": "images/commons inside.jpeg",
+        "img": "images/commons inside.jpg",
         "href": "#update-page"}
     ],
 
@@ -29,20 +29,20 @@
         {"text": "Watch: The other two towers on the south of campus get blown up",
         "subtext": "We have 20 floors to choose from",
         "btntext": "Click here",
-        "img": "images/better towers floor plan.PNG",
+        "img": "images/towers demolition.PNG",
         "href": "history.html"}, 
 
         {"text": "Beat Iowa: A staple of Iowa State", 
         "subtext": "See it be recreated here",
         "btntext": "Click here",
-        "img": "images/better towers floor plan.PNG",
-        "href": ""},
+        "img": "images/beat iowa.jpg",
+        "href": "history.html"},
 
-        {"text": "An update regarding the Mini-mart located inside the commons", 
-        "subtext": "Petty theft threatens the closure of the Mini-mart",
+        {"text": "The basement used to house the cleaning staff", 
+        "subtext": "That and more about our obscure history",
         "btntext": "Read More",
-        "img": "images/better towers floor plan.PNG",
-        "href": ""}
+        "img": "images/wallace basement.PNG",
+        "href": "history.html"}
     ],
 
     "featured_page": {

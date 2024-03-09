@@ -100,7 +100,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
+    <link href="styles/floorplans.css" rel="stylesheet">
   </head>
   <body class="d-flex h-100 text-center text-bg-dark">
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -156,16 +156,33 @@
 
     
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0">Cover</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-        <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <header class = "header" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Wallace and Wilson Residence Halls</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="floorplans.html">Floor Plans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="history.html">Our History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="authors.html">Authors</a>
+                </li>
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+            </div>
+        </nav>
+    </header>
 
   <main class="px-3">
     <h1>Cover your page.</h1>
@@ -175,8 +192,18 @@
     </p>
   </main>
 
-  <footer class="mt-auto text-white-50">
-    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
+   <!-- FOOTER -->
+  <footer class="container">
+    <!-- <p class="float-end"><a href="#">Back to top</a></p> -->
+    <!-- <p>&copy; 2017–2023 Company, Inc. &middot; <a class="nav-link" href="#">Privacy</a> &middot; <a class="nav-link"href="#">Terms</a></p> -->
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Wallace and Wilson Residence Halls</a></li>
+      <li class="nav-item"><a href="floorplans.html" class="nav-link px-2 text-body-secondary">Floor Plans</a></li>
+      <li class="nav-item"><a href="history.html" class="nav-link px-2 text-body-secondary">Our History</a></li>
+      <li class="nav-item"><a href="https://www.housing.iastate.edu/" class="nav-link px-2 text-body-secondary">Department of Residence</a></li>
+      <li class="nav-item"><a href="authors.html" class="nav-link px-2 text-body-secondary">Authors</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">&copy; Nobody</p>
   </footer>
 </div>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

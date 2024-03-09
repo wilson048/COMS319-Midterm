@@ -149,6 +149,7 @@ function placeIndexData(jsonData) {
       hHistoryElement.innerText = jsonData.index_history_data[i].text;
       hHistoryElement.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
       pHistoryElementOne.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
+      
       var historyImgElement = document.getElementById("History-" + (i + 1) + "-img")
       historyImgElement.src = jsonData.index_history_data[i].img;
       
