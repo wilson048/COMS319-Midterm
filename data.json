@@ -1,7 +1,7 @@
 {
     "top_page": {
         "text": "Welcome to Wallace and Wilson Residence Halls here at Ames, Iowa",
-        "subtext": "Enjoy a place away from the Iowa State Campus, featuring over 20 stories combined between the building along with outdoor play areas and an indoor gym",
+        "subtext": "Enjoy a place away from the Iowa State Campus, featuring over 20 stories combined between the buildings along with outdoor play areas and an indoor gym",
         "iframe_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4192.133339183274!2d-93.64940209469924!3d42.01559854604456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ee7a08d51bd6b7%3A0x172ab854733e2f76!2sWallace%20Residence%20Hall!5e0!3m2!1sen!2sus!4v1709693725938!5m2!1sen!2sus" 
     },
 
@@ -82,6 +82,164 @@
         {
             "video":"https://www.youtube.com/embed/bF_hLngCRQk"
         }
+    ],
+    "building_dropdown": [
+        {
+            "text": "Wallace",
+            "address": "917 Welch Ave, Ames, IA 50014",
+            "href": "https://www.housing.iastate.edu/halls/wallace/",
+            "img": "images/wallaceoutside.jpg"
+        },
+        {
+            "text": "Wilson",
+            "address": "2499 Storm St, Ames, IA 50014",
+            "href": "https://www.housing.iastate.edu/halls/wilson/",
+            "img": "images/wilson outside.jpg"
+        },
+        {
+            "text": "Commons",
+            "address": "926 Hayward Ave, Ames, IA 50014",
+            "href": "",
+            "img": "images/commons outside.jpg"
+        }
+    ],
+    "wallace_floor_dropdown": [
+        {
+            "text": "1st Floor",
+            "hall": "Kilbourne",
+            "href": "https://www.housing.iastate.edu/halls/wallace/kilbourne/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "2nd Floor",
+            "hall": "Rambo",
+            "href": "https://www.housing.iastate.edu/halls/wallace/rambo/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "3rd Floor",
+            "hall": "Nuckolls",
+            "href": "https://www.housing.iastate.edu/halls/wallace/nuckolls/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "4th Floor",
+            "hall": "Errington",
+            "href": "https://www.housing.iastate.edu/halls/wallace/errington/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "5th Floor",
+            "hall": "Nielsen",
+            "href": "https://www.housing.iastate.edu/halls/wallace/nielsen/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "6th Floor",
+            "hall": "Hartman",
+            "href": "https://www.housing.iastate.edu/halls/wallace/hartman/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "7th Floor",
+            "hall": "Lancelot",
+            "href": "https://www.housing.iastate.edu/halls/wallace/lancelot/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "8th Floor",
+            "hall": "Lantz",
+            "href": "https://www.housing.iastate.edu/halls/wallace/lantz/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "9th Floor",
+            "hall": "McCowen",
+            "href": "https://www.housing.iastate.edu/halls/wallace/mccowen/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "10th Floor",
+            "hall": "Petersen",
+            "href": "https://www.housing.iastate.edu/halls/wallace/petersen/",
+            "img": "images/better towers floor plan.PNG"
+        }
+    ],
+    "wilson_floor_dropdown": [
+        {
+            "text": "1st Floor",
+            "hall": "Gwynne",
+            "href": "https://www.housing.iastate.edu/halls/wilson/gwynne/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "2nd Floor",
+            "hall": "Owens",
+            "href": "https://www.housing.iastate.edu/halls/wilson/owens/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "3rd Floor",
+            "hall": "Hewitt",
+            "href": "https://www.housing.iastate.edu/halls/wilson/hewitt/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "4th Floor",
+            "hall": "Johnson",
+            "href": "https://www.housing.iastate.edu/halls/wilson/johnson/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "5th Floor",
+            "hall": "Lamson",
+            "href": "https://www.housing.iastate.edu/halls/wilson/lamson/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "6th Floor",
+            "hall": "Mashek",
+            "href": "https://www.housing.iastate.edu/halls/wilson/mashek/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "7th Floor",
+            "hall": "Matterson",
+            "href": "https://www.housing.iastate.edu/halls/wilson/matterson/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "8th Floor",
+            "hall": "Rothacker",
+            "href": "https://www.housing.iastate.edu/halls/wilson/rothacker/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "9th Floor",
+            "hall": "Webber",
+            "href": "https://www.housing.iastate.edu/halls/wilson/webber/",
+            "img": "images/better towers floor plan.PNG"
+        },
+        {
+            "text": "10th Floor",
+            "hall": "Werkman",
+            "href": "https://www.housing.iastate.edu/halls/wilson/werkman/",
+            "img": "images/better towers floor plan.PNG"
+        }
+    ],
+    "floor disclaimer": "*All floor plans between Wallace and Wilson are one-to-one",
+    "commons_floor_dropdown": [
+        {
+            "text": "Ground Floor",
+            "hall": "Commons",
+            "href": "",
+            "img": "images/commons ground floor.PNG"
+        },
+        {
+            "text": "Basement",
+            "hall": "Commons",
+            "href": "history.html",
+            "img": "images/commons ground floor.PNG"
+        }
     ]
-    
 }
