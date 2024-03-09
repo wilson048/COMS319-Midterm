@@ -18,7 +18,9 @@ function placeDropdownData(jsonData) {
         // lElement.innerHTML = `<a class="dropdown-item" href="#">${}</a>`;
         lElement.appendChild(lButtonElement);
         buildingDropdown.appendChild(lElement);
-        if (lButtonElement.id = "Wallace") {
+
+
+        if (lButtonElement.id == "Wallace") {
             for (var j = 0; j < jsonData.wallace_floor_dropdown.length; j++) {
                 var element = document.createElement("li");
                 var buttonelement = document.createElement("a");
@@ -28,12 +30,14 @@ function placeDropdownData(jsonData) {
                 buttonelement.addEventListener("click", function () {
                     placeFloorplanDataWallace(this.id, jsonData);
                 })
+                element.appendChild(buttonelement);
+                floorDropdown.appendChild(element);
             }
         }
-        else if (lButtonElement.id = "Wilson") {
+        else if (lButtonElement.id == "Wilson") {
 
         }
-        else if (lButtonElement.id = "Commons") {
+        else if (lButtonElement.id == "Commons") {
 
         }
         else {
@@ -48,30 +52,60 @@ function placeFloorplanDataWallace(text, jsonData) {
     var h1Element = document.createElement("h1");
     var pElement = document.createElement("p");
     var imgElement = document.createElement("img");
+    var link = document.createElement("a");
     var isSelected = false;
     switch (text) {
         case "1st Floor":
+            // placeData(0,pElement,imgElement,h1Element,link,isSelected);
+            h1Element.innerText = jsonData.wallace_floor_dropdown[0].text;
+            pElement.innerText = jsonData.wallace_floor_dropdown[0].hall;
+            imgElement.src = jsonData.wallace_floor_dropdown[0].img;
+            link.href = jsonData.wallace_floor_dropdown[0].href;
+            isSelected = true;
             break;
         case "2nd Floor":
+            placeData(1, pElement, imgElement, h1Element, link, isSelected);
             break;
         case "3rd Floor":
+            placeData(2, pElement, imgElement, h1Element, link, isSelected);
             break;
         case "4th Floor":
+            placeData(3, pElement, imgElement, h1Element, link, isSelected);
             break;
         case "5th Floor":
+            placeData(4, pElement, imgElement, h1Element, link, isSelected);
             break;
         case "6th Floor":
+            placeData(5, pElement, imgElement, h1Element, link, isSelected);
             break;
         case "7th Floor":
+            placeData(6, pElement, imgElement, h1Element, link, isSelected);
             break;
         case "8th Floor":
+            placeData(7, pElement, imgElement, h1Element, link, isSelected);
             break;
         case "9th Floor":
+            placeData(8, pElement, imgElement, h1Element, link, isSelected);
             break;
         case "10th Floor":
+            placeData(9, pElement, imgElement, h1Element, link, isSelected);
             break;
-
+        default:
+            break;
     }
+    if (isSelected) {
+        buildingDiv.appendChild(h1Element);
+        buildingDiv.appendChild(pElement);
+        buildingDiv.appendChild(imgElement);
+    }
+}
+
+function placeData(i, pElement, imgElement, h1Element, link, isSelected) {
+    h1Element.innerText = jsonData.wallace_floor_dropdown[i].text;
+    pElement.innerText = jsonData.wallace_floor_dropdown[i].hall;
+    imgElement.src = jsonData.wallace_floor_dropdown[i].img;
+    link.href = jsonData.wallace_floor_dropdown[i].href;
+    isSelected = true;
 }
 
 
