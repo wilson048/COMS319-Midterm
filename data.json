@@ -15,34 +15,34 @@
         {"text": "Learn more our head body, the Department of Residence", 
         "subtext": "They are the bueracratic authority in charge of us",
         "btntext": "Click here",
-        "img": "images/inside room.jpeg",
+        "img": "images/inside room.jpg",
         "href": "https://www.housing.iastate.edu/"},
 
         {"text": "An update regarding the Mini-mart located inside the commons", 
         "subtext": "Petty theft threatens the closure of the Mini-mart",
         "btntext": "Read More",
-        "img": "images/commons inside.jpeg",
+        "img": "images/commons inside.jpg",
         "href": "#update-page"}
     ],
 
     "index_history_data": [
         {"text": "Watch: The other two towers on the south of campus get blown up",
         "subtext": "We have 20 floors to choose from",
-        "btntext": "Click here",
-        "img": "images/better towers floor plan.PNG",
+        "btntext": "Watch here",
+        "img": "images/towers demolition.PNG",
         "href": "history.html"}, 
 
         {"text": "Beat Iowa: A staple of Iowa State", 
         "subtext": "See it be recreated here",
         "btntext": "Click here",
-        "img": "images/better towers floor plan.PNG",
-        "href": ""},
+        "img": "images/beat iowa.jpg",
+        "href": "history.html"},
 
         {"text": "An update regarding the Mini-mart located inside the commons", 
         "subtext": "Petty theft threatens the closure of the Mini-mart",
         "btntext": "Read More",
         "img": "images/better towers floor plan.PNG",
-        "href": ""}
+        "href": "history.html"}
     ],
 
     "featured_page": {

@@ -27,6 +27,16 @@ body {
   height: 32rem;
 }
 
+.carousel-inner {
+  /* make sure your .items will get correct height */
+  height: 100%;
+}
+
+.carousel img {
+  width:100% !important;
+  min-width:100 !important;
+  height: auto;
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */

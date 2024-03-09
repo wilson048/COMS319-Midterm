@@ -7,40 +7,35 @@ recentCarousel.innerHTML =
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+      <img id = "Recent-1-img" class class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
       <div class="container">
         <div id = "Recent-1" class="carousel-caption text-start">
           
         </div>
       </div>
-      <div id = Recent-1-img class = "container"> 
+      <div  = "container"> 
 
       </div>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+      <img id = "Recent-2-img" class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
       <div class="container">
         <div id = "Recent-2" class="carousel-caption text-start">
           
         </div>
       </div>
-      <div id = Recent-2-img class = "container"> 
-      
-      </div>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+      <img id = "Recent-3-img" class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
       <div class="container">
         <div id = "Recent-3" class="carousel-caption text-start">
           
         </div>
       </div>
-      <div id = Recent-3-img class = "container"> 
-      
-      </div>
+
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#Recent-Carousel" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button"  data-bs-target="#Recent-Carousel" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
@@ -58,7 +53,7 @@ historyCarousel.innerHTML =
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+      <img id = "History-1-img" class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
       <div class="container">
         <div id = "History-1" class="carousel-caption text-end">
           
@@ -66,7 +61,7 @@ historyCarousel.innerHTML =
       </div>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+      <img id = "History-2-img" class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
       <div class="container">
         <div id = "History-2" class="carousel-caption text-end">
           
@@ -74,7 +69,7 @@ historyCarousel.innerHTML =
       </div>
     </div>
     <div class="carousel-item">
-      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+      <img id = "History-3-img" class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
       <div class="container">
         <div id = "History-3" class="carousel-caption text-end">
           
@@ -127,13 +122,14 @@ function placeIndexData(jsonData) {
       // First Carousel, featuring recent information 
       // Get parent element + create 3 new elements
       var recentElement = document.getElementById("Recent-" + (i + 1));
-      recentElement.innerHTML = `<img class = "col-md-7" width=25% height=25% src = ${jsonData.index_recent_data[i].img}>`;
       var hRecentElement = document.createElement("h1");
       var pRecentElementOne = document.createElement("p");
       var pRecentElementTwo = document.createElement("p");
       // Populate elements with data from data.json
       hRecentElement.innerText = jsonData.index_recent_data[i].text;
+      hRecentElement.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
       pRecentElementOne.innerText = jsonData.index_recent_data[i].subtext;
+      pRecentElementOne.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
       pRecentElementTwo.innerHTML = `<a class="btn btn-lg btn-primary" href="${jsonData.index_recent_data[i].href}">${jsonData.index_recent_data[i].btntext}</a>`
       // Append elements to parent element
       recentElement.appendChild(hRecentElement);
@@ -141,7 +137,7 @@ function placeIndexData(jsonData) {
       recentElement.appendChild(pRecentElementTwo);
 
       var imgElement = document.getElementById("Recent-" + (i + 1) + "-img");
-      imgElement.innerHTML = `<img src = ${jsonData.index_recent_data[i].img}>`;
+      imgElement.src = jsonData.index_recent_data[i].img;
       
       // Second Carousel, featuring historic information 
       // Get parent element + create 3 new elements
@@ -151,9 +147,13 @@ function placeIndexData(jsonData) {
       var pHistoryElementTwo = document.createElement("p");
       // Populate elements with data from data.json
       hHistoryElement.innerText = jsonData.index_history_data[i].text;
+      hHistoryElement.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
+      pHistoryElementOne.style = `text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;`;
+      var historyImgElement = document.getElementById("History-" + (i + 1) + "-img")
+      historyImgElement.src = jsonData.index_history_data[i].img;
       
       pHistoryElementOne.innerText = jsonData.index_history_data[i].subtext;
-      pHistoryElementTwo.innerHTML = `<a class="btn btn-lg btn-primary" href="#">${jsonData.index_history_data[i].btntext}</a>`
+      pHistoryElementTwo.innerHTML = `<a class="btn btn-lg btn-primary" href="${jsonData.index_history_data[i].href}">${jsonData.index_history_data[i].btntext}</a>`
       // Append elements to parent element
       historyElement.appendChild(hHistoryElement);
       historyElement.appendChild(pHistoryElementOne);
