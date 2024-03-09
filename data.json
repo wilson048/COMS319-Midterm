@@ -232,13 +232,13 @@
         {
             "text": "Ground Floor",
             "hall": "Commons",
-            "href": "",
+            "href": "https://www.fpm.iastate.edu/maps/buildings/building.asp?id=169",
             "img": "images/commons ground floor.PNG"
         },
         {
             "text": "Basement",
             "hall": "Commons",
-            "href": "history.html",
+            "href": "https://www.fpm.iastate.edu/maps/buildings/building.asp?id=169",
             "img": "images/commons ground floor.PNG"
         }
     ]
