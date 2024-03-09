@@ -32,5 +32,16 @@ function placehistoryData(jsonData) {
    
     var video = document.getElementById("video");
     towerheader.src=jsonData.history_information[4].video;
+
+    var nighttowerheader = document.getElementById("night tower header");
+    nighttowerheader.innerText=jsonData.history_information[3].text;
     
+    var nightdate = document.getElementById("nightdatetower");
+    nightdate.innerText=jsonData.history_information[3].subtext;
+
+    var nighttext = document.getElementById("nightmidtexttower");
+    nighttext.innerText=jsonData.history_information[3].lowerText;
+
+    var nightimg = document.getElementById("nighttowerimg");
+    nightimg.src=jsonData.history_information[3].img;
 }

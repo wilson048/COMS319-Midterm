@@ -76,7 +76,8 @@
         {
             "text":"A pretty image of Towers at Night",
             "subtext":"Unknown date",
-            "lowerText":"The towers are very pretty at night with some of the lights on. Sadly only 2 of them still exsist today"
+            "lowerText":"The towers are very pretty at night with some of the lights on. Sadly only 2 of them still exsist today",
+            "img" : "images/night towers photo.jpg"
         },
         {
             "video":"https://www.youtube.com/watch?v=bF_hLngCRQk"
