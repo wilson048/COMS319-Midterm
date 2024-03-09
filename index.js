@@ -13,6 +13,9 @@ recentCarousel.innerHTML =
           
         </div>
       </div>
+      <div id = Recent-1-img class = "container"> 
+
+      </div>
     </div>
     <div class="carousel-item">
       <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
@@ -21,6 +24,9 @@ recentCarousel.innerHTML =
           
         </div>
       </div>
+      <div id = Recent-2-img class = "container"> 
+      
+      </div>
     </div>
     <div class="carousel-item">
       <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
@@ -28,6 +34,9 @@ recentCarousel.innerHTML =
         <div id = "Recent-3" class="carousel-caption text-start">
           
         </div>
+      </div>
+      <div id = Recent-3-img class = "container"> 
+      
       </div>
     </div>
   </div>
@@ -118,17 +127,22 @@ function placeIndexData(jsonData) {
       // First Carousel, featuring recent information 
       // Get parent element + create 3 new elements
       var recentElement = document.getElementById("Recent-" + (i + 1));
+      recentElement.innerHTML = `<img class = "col-md-7" width=25% height=25% src = ${jsonData.index_recent_data[i].img}>`;
       var hRecentElement = document.createElement("h1");
       var pRecentElementOne = document.createElement("p");
       var pRecentElementTwo = document.createElement("p");
       // Populate elements with data from data.json
       hRecentElement.innerText = jsonData.index_recent_data[i].text;
       pRecentElementOne.innerText = jsonData.index_recent_data[i].subtext;
-      pRecentElementTwo.innerHTML = `<a class="btn btn-lg btn-primary" href="#">${jsonData.index_recent_data[i].btntext}</a>`
+      pRecentElementTwo.innerHTML = `<a class="btn btn-lg btn-primary" href="${jsonData.index_recent_data[i].href}">${jsonData.index_recent_data[i].btntext}</a>`
       // Append elements to parent element
       recentElement.appendChild(hRecentElement);
       recentElement.appendChild(pRecentElementOne);
       recentElement.appendChild(pRecentElementTwo);
+
+      var imgElement = document.getElementById("Recent-" + (i + 1) + "-img");
+      imgElement.innerHTML = `<img src = ${jsonData.index_recent_data[i].img}>`;
+      
       // Second Carousel, featuring historic information 
       // Get parent element + create 3 new elements
       var historyElement = document.getElementById("History-" + (i + 1));
@@ -137,6 +151,7 @@ function placeIndexData(jsonData) {
       var pHistoryElementTwo = document.createElement("p");
       // Populate elements with data from data.json
       hHistoryElement.innerText = jsonData.index_history_data[i].text;
+      
       pHistoryElementOne.innerText = jsonData.index_history_data[i].subtext;
       pHistoryElementTwo.innerHTML = `<a class="btn btn-lg btn-primary" href="#">${jsonData.index_history_data[i].btntext}</a>`
       // Append elements to parent element
@@ -145,29 +160,54 @@ function placeIndexData(jsonData) {
       historyElement.appendChild(pHistoryElementTwo);
   }
 
-  // Bottom Page Data
-  var bottomElement = document.getElementById("bottom-page");
-  var h2BottomElement = document.createElement("h2");
-  var pBottomElement = document.createElement("p");
+  // Featured Page Data
+  var featuredElement = document.getElementById("featured-page");
+  var h2FeaturedElement = document.createElement("h2");
+  var pFeaturedElement = document.createElement("p");
   
-  h2BottomElement.className = "featurette-heading fw-normal lh-1";
-  h2BottomElement.innerText = jsonData.bottom_page.text;
-  pBottomElement.className = "lead";
-  pBottomElement.innerText = jsonData.bottom_page.subtext;
+  h2FeaturedElement.className = "featurette-heading fw-normal lh-1";
+  h2FeaturedElement.innerText = jsonData.featured_page.text;
+  pFeaturedElement.className = "lead";
+  pFeaturedElement.innerText = jsonData.featured_page.subtext;
   
-  bottomElement.append(h2BottomElement);
-  bottomElement.append(pBottomElement);
-  // Bottom Page Image Data
-  var bottomImgElement = document.getElementById("bottom-page-img");
-  var bottomImg = document.createElement("img");
-  bottomImg.src = jsonData.bottom_page.img;
-  bottomImg.className = "bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto";
-  bottomImg.width = 500;
-  bottomImg.height = 500;
-  bottomImg.xmlns = "http://www.w3.org/2000/svg";
-  bottomImg.role = "img";
-  bottomImg.preserveAspectRatio = "xMidYMid slice";
-  bottomImg.focusable = "false";
+  featuredElement.appendChild(h2FeaturedElement);
+  featuredElement.appendChild(pFeaturedElement);
+  // featured Page Image Data
+  var featuredImgElement = document.getElementById("featured-page-img");
+  var featuredImg = document.createElement("img");
+  featuredImg.src = jsonData.featured_page.img;
+  featuredImg.className = "bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto";
+  featuredImg.width = 500;
+  featuredImg.height = 500;
+  featuredImg.xmlns = "http://www.w3.org/2000/svg";
+  featuredImg.role = "img";
+  featuredImg.preserveAspectRatio = "xMidYMid slice";
+  featuredImg.focusable = "false";
 
-  bottomImgElement.appendChild(bottomImg);
+  featuredImgElement.appendChild(featuredImg);
+  // Updated Page
+  var updateElement = document.getElementById("update-page");
+  var h2UpdateElement = document.createElement("h2");
+  var pUpdateElement = document.createElement("p");
+  
+  h2UpdateElement.className = "featurette-heading fw-normal lh-1";
+  h2UpdateElement.innerText = jsonData.update_page.text;
+  pUpdateElement.className = "lead";
+  pUpdateElement.innerText = jsonData.update_page.subtext;
+  
+  updateElement.appendChild(h2UpdateElement);
+  updateElement.appendChild(pUpdateElement);
+  // update page Image data
+  var updateImgElement = document.getElementById("update-page-img");
+  var updateImg = document.createElement("img");
+  updateImg.src = jsonData.update_page.img;
+  updateImg.className = "bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto";
+  updateImg.width = 500;
+  updateImg.height = 500;
+  updateImg.xmlns = "http://www.w3.org/2000/svg";
+  updateImg.role = "img";
+  updateImg.preserveAspectRatio = "xMidYMid slice";
+  updateImg.focusable = "false";
+
+  updateImgElement.appendChild(updateImg);
 }
