@@ -31,7 +31,7 @@ function placehistoryData(jsonData) {
     towerheader.innerText=jsonData.history_information[0].subtext;
    
     var video = document.getElementById("video");
-    towerheader.src=jsonData.history_information[4].video;
+    video.src=jsonData.history_information[4].video;
 
     var nighttowerheader = document.getElementById("night tower header");
     nighttowerheader.innerText=jsonData.history_information[3].text;
