@@ -5,7 +5,7 @@ fetch('data.json')
 function placeDropdownData(jsonData) {
     // Build Dropdown menu for buildings
     buildingDropdown = document.getElementById("Building-Dropdown");
-    floorDropdown = document.getElementById("Floor-Dropdown");
+    
     for (var i = 0; i < jsonData.building_dropdown.length; i++) {
         var lElement = document.createElement("li");
         var lButtonElement = document.createElement("a");
@@ -18,94 +18,70 @@ function placeDropdownData(jsonData) {
         // lElement.innerHTML = `<a class="dropdown-item" href="#">${}</a>`;
         lElement.appendChild(lButtonElement);
         buildingDropdown.appendChild(lElement);
-
-
-        if (lButtonElement.id == "Wallace") {
-            for (var j = 0; j < jsonData.wallace_floor_dropdown.length; j++) {
-                var element = document.createElement("li");
-                var buttonelement = document.createElement("a");
-                buttonelement.className = "dropdown-item";
-                buttonelement.id = jsonData.wallace_floor_dropdown[j].text;
-                buttonelement.innerText = jsonData.wallace_floor_dropdown[j].text;
-                buttonelement.addEventListener("click", function () {
-                    placeFloorplanDataWallace(this.id, jsonData);
-                })
-                element.appendChild(buttonelement);
-                floorDropdown.appendChild(element);
-            }
-        }
-        else if (lButtonElement.id == "Wilson") {
-
-        }
-        else if (lButtonElement.id == "Commons") {
-
-        }
-        else {
-
-        }
     }
 }
 
-function placeFloorplanDataWallace(text, jsonData) {
+function placeFloorplanData(text, jsonData) {
     var floorDiv = document.getElementById("Floor");
     floorDiv.innerHTML = "";
     var h1Element = document.createElement("h1");
     var pElement = document.createElement("p");
+    var disclaimerElement =  document.createElement("p");
+    disclaimerElement.innerText = jsonData.floor_disclaimer;
     var imgElement = document.createElement("img");
     var link = document.createElement("a");
-    var isSelected = false;
-    switch (text) {
-        case "1st Floor":
-            placeData(0,pElement,imgElement,h1Element,link,isSelected,jsonData);
-            // h1Element.innerText = jsonData.wallace_floor_dropdown[0].text;
-            // pElement.innerText = jsonData.wallace_floor_dropdown[0].hall;
-            // imgElement.src = jsonData.wallace_floor_dropdown[0].img;
-            // link.href = jsonData.wallace_floor_dropdown[0].href;
-            // isSelected = true;
-            break;
-        case "2nd Floor":
-            placeData(1, pElement, imgElement, h1Element, link, isSelected,jsonData);
-            break;
-        case "3rd Floor":
-            placeData(2, pElement, imgElement, h1Element, link, isSelected,jsonData);
-            break;
-        case "4th Floor":
-            placeData(3, pElement, imgElement, h1Element, link, isSelected,jsonData);
-            break;
-        case "5th Floor":
-            placeData(4, pElement, imgElement, h1Element, link, isSelected,jsonData);
-            break;
-        case "6th Floor":
-            placeData(5, pElement, imgElement, h1Element, link, isSelected,jsonData);
-            break;
-        case "7th Floor":
-            placeData(6, pElement, imgElement, h1Element, link, isSelected,jsonData);
-            break;
-        case "8th Floor":
-            placeData(7, pElement, imgElement, h1Element, link, isSelected,jsonData);
-            break;
-        case "9th Floor":
-            placeData(8, pElement, imgElement, h1Element, link, isSelected,jsonData);
-            break;
-        case "10th Floor":
-            placeData(9, pElement, imgElement, h1Element, link, isSelected,jsonData);
-            break;
-        default:
-            break;
+    link.innerText = "Learn More";
+
+    var isHall = false;
+    // Set data here
+    if(text.includes("Wallace")) {
+        h1Element.innerText = jsonData.wallace_floor_dropdown[parseInt(text) - 1].text;
+        pElement.innerText = jsonData.wallace_floor_dropdown[parseInt(text) - 1].hall;
+        imgElement.src = jsonData.wallace_floor_dropdown[parseInt(text) - 1].img;
+        link.href = jsonData.wallace_floor_dropdown[parseInt(text) - 1].href;
+        isHall = true
     }
-    if (isSelected) {
-        floorDiv.appendChild(h1Element);
-        floorDiv.appendChild(pElement);
-        floorDiv.appendChild(imgElement);
+    // Set data here
+    else if (text.includes("Wilson")) {
+        h1Element.innerText = jsonData.wilson_floor_dropdown[parseInt(text) - 1].text;
+        pElement.innerText = jsonData.wilson_floor_dropdown[parseInt(text) - 1].hall;
+        imgElement.src = jsonData.wilson_floor_dropdown[parseInt(text) - 1].img;
+        link.href = jsonData.wilson_floor_dropdown[parseInt(text) - 1].href;
+        isHall = true
     }
+    // Set data here
+    else if (text.includes("Commons")) {
+        switch (text) {
+            case "Ground Floor Commons":
+                h1Element.innerText = jsonData.commons_floor_dropdown[0].text;
+                pElement.innerText = jsonData.commons_floor_dropdown[0].hall;
+                imgElement.src = jsonData.commons_floor_dropdown[0].img;
+                link.href = jsonData.commons_floor_dropdown[0].href;
+                break;
+            case "Basement Commons":
+                h1Element.innerText = jsonData.commons_floor_dropdown[1].text;
+                pElement.innerText = jsonData.commons_floor_dropdown[1].hall;
+                imgElement.src = jsonData.commons_floor_dropdown[1].img;
+                link.href = jsonData.commons_floor_dropdown[1].href;
+                break;
+        }
+    }
+    
+    floorDiv.appendChild(h1Element);
+    floorDiv.appendChild(pElement);
+    // Only add if the selected building is a reseidence hall
+    if(isHall) {
+        floorDiv.appendChild(disclaimerElement);
+    }
+    floorDiv.appendChild(imgElement);
+    floorDiv.appendChild(link);
 }
 
-function placeData(i, pElement, imgElement, h1Element, link, isSelected,jsonData) {
+function placeData(i, pElement, imgElement, h1Element, link, jsonData) {
     h1Element.innerText = jsonData.wallace_floor_dropdown[i].text;
     pElement.innerText = jsonData.wallace_floor_dropdown[i].hall;
     imgElement.src = jsonData.wallace_floor_dropdown[i].img;
     link.href = jsonData.wallace_floor_dropdown[i].href;
-    isSelected = true;
 }
 
 
@@ -116,6 +92,9 @@ function placeBuildingData(text, jsonData) {
     var pElement = document.createElement("p");
     var imgElement = document.createElement("img");
     var isSelected = false;
+
+    floorDropdown = document.getElementById("Floor-Dropdown");
+    floorDropdown.innerHTML = '';
     // Cases for changing Images 
     switch (text) {
         // Wallace
@@ -124,6 +103,18 @@ function placeBuildingData(text, jsonData) {
             pElement.innerText = jsonData.building_dropdown[0].address;
             imgElement.src = jsonData.building_dropdown[0].img;
             isSelected = true;
+            for (var j = 0; j < jsonData.wallace_floor_dropdown.length; j++) {
+                var element = document.createElement("li");
+                var buttonElement = document.createElement("a");
+                buttonElement.className = "dropdown-item";
+                buttonElement.id = jsonData.wallace_floor_dropdown[j].text;
+                buttonElement.innerText = jsonData.wallace_floor_dropdown[j].text;
+                buttonElement.addEventListener("click", function () {
+                    placeFloorplanData(this.id, jsonData);
+                })
+                element.appendChild(buttonElement);
+                floorDropdown.appendChild(element);
+            }
             break;
         // Wilson
         case "Wilson":
@@ -131,6 +122,18 @@ function placeBuildingData(text, jsonData) {
             pElement.innerText = jsonData.building_dropdown[1].address;
             imgElement.src = jsonData.building_dropdown[1].img;
             isSelected = true;
+            for (var j = 0; j < jsonData.wilson_floor_dropdown.length; j++) {
+                var element = document.createElement("li");
+                var buttonElement = document.createElement("a");
+                buttonElement.className = "dropdown-item";
+                buttonElement.id = jsonData.wilson_floor_dropdown[j].text;
+                buttonElement.innerText = jsonData.wilson_floor_dropdown[j].text;
+                buttonElement.addEventListener("click", function () {
+                    placeFloorplanData(this.id, jsonData);
+                })
+                element.appendChild(buttonElement);
+                floorDropdown.appendChild(element);
+            }
             break;
         // Commons
         case "Commons":
@@ -138,6 +141,19 @@ function placeBuildingData(text, jsonData) {
             pElement.innerText = jsonData.building_dropdown[2].address;
             imgElement.src = jsonData.building_dropdown[2].img;
             isSelected = true;
+
+            for (var j = 0; j < jsonData.commons_floor_dropdown.length; j++) {
+                var element = document.createElement("li");
+                var buttonElement = document.createElement("a");
+                buttonElement.className = "dropdown-item";
+                buttonElement.id = jsonData.commons_floor_dropdown[j].text;
+                buttonElement.innerText = jsonData.commons_floor_dropdown[j].text;
+                buttonElement.addEventListener("click", function () {
+                    placeFloorplanData(this.id, jsonData);
+                })
+                element.appendChild(buttonElement);
+                floorDropdown.appendChild(element);
+            }
             break;
         default:
             break;

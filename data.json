@@ -110,61 +110,61 @@
     ],
     "wallace_floor_dropdown": [
         {
-            "text": "1st Floor",
+            "text": "1st Floor Wallace",
             "hall": "Kilbourne",
             "href": "https://www.housing.iastate.edu/halls/wallace/kilbourne/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "2nd Floor",
+            "text": "2nd Floor Wallace",
             "hall": "Rambo",
             "href": "https://www.housing.iastate.edu/halls/wallace/rambo/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "3rd Floor",
+            "text": "3rd Floor Wallace",
             "hall": "Nuckolls",
             "href": "https://www.housing.iastate.edu/halls/wallace/nuckolls/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "4th Floor",
+            "text": "4th Floor Wallace",
             "hall": "Errington",
             "href": "https://www.housing.iastate.edu/halls/wallace/errington/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "5th Floor",
+            "text": "5th Floor Wallace",
             "hall": "Nielsen",
             "href": "https://www.housing.iastate.edu/halls/wallace/nielsen/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "6th Floor",
+            "text": "6th Floor Wallace",
             "hall": "Hartman",
             "href": "https://www.housing.iastate.edu/halls/wallace/hartman/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "7th Floor",
+            "text": "7th Floor Wallace",
             "hall": "Lancelot",
             "href": "https://www.housing.iastate.edu/halls/wallace/lancelot/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "8th Floor",
+            "text": "8th Floor Wallace",
             "hall": "Lantz",
             "href": "https://www.housing.iastate.edu/halls/wallace/lantz/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "9th Floor",
+            "text": "9th Floor Wallace",
             "hall": "McCowen",
             "href": "https://www.housing.iastate.edu/halls/wallace/mccowen/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "10th Floor",
+            "text": "10th Floor Wallace",
             "hall": "Petersen",
             "href": "https://www.housing.iastate.edu/halls/wallace/petersen/",
             "img": "images/better towers floor plan.PNG"
@@ -172,79 +172,79 @@
     ],
     "wilson_floor_dropdown": [
         {
-            "text": "1st Floor",
+            "text": "1st Floor Wilson",
             "hall": "Gwynne",
             "href": "https://www.housing.iastate.edu/halls/wilson/gwynne/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "2nd Floor",
+            "text": "2nd Floor Wilson",
             "hall": "Owens",
             "href": "https://www.housing.iastate.edu/halls/wilson/owens/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "3rd Floor",
+            "text": "3rd Floor Wilson",
             "hall": "Hewitt",
             "href": "https://www.housing.iastate.edu/halls/wilson/hewitt/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "4th Floor",
+            "text": "4th Floor Wilson",
             "hall": "Johnson",
             "href": "https://www.housing.iastate.edu/halls/wilson/johnson/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "5th Floor",
+            "text": "5th Floor Wilson",
             "hall": "Lamson",
             "href": "https://www.housing.iastate.edu/halls/wilson/lamson/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "6th Floor",
+            "text": "6th Floor Wilson",
             "hall": "Mashek",
             "href": "https://www.housing.iastate.edu/halls/wilson/mashek/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "7th Floor",
+            "text": "7th Floor Wilson",
             "hall": "Matterson",
             "href": "https://www.housing.iastate.edu/halls/wilson/matterson/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "8th Floor",
+            "text": "8th Floor Wilson",
             "hall": "Rothacker",
             "href": "https://www.housing.iastate.edu/halls/wilson/rothacker/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "9th Floor",
+            "text": "9th Floor Wilson",
             "hall": "Webber",
             "href": "https://www.housing.iastate.edu/halls/wilson/webber/",
             "img": "images/better towers floor plan.PNG"
         },
         {
-            "text": "10th Floor",
+            "text": "10th Floor Wilson",
             "hall": "Werkman",
             "href": "https://www.housing.iastate.edu/halls/wilson/werkman/",
             "img": "images/better towers floor plan.PNG"
         }
     ],
-    "floor disclaimer": "*All floor plans between Wallace and Wilson are one-to-one",
+    "floor_disclaimer": "*All floor plans between Wallace and Wilson are one-to-one",
     "commons_floor_dropdown": [
         {
-            "text": "Ground Floor",
+            "text": "Ground Floor Commons",
             "hall": "Commons",
             "href": "https://www.fpm.iastate.edu/maps/buildings/building.asp?id=169",
             "img": "images/commons ground floor.PNG"
         },
         {
-            "text": "Basement",
+            "text": "Basement Commons",
             "hall": "Commons",
             "href": "https://www.fpm.iastate.edu/maps/buildings/building.asp?id=169",
-            "img": "images/commons ground floor.PNG"
+            "img": "images/commons basement.PNG"
         }
     ]
 }
